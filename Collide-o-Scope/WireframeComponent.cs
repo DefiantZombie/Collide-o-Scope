@@ -76,6 +76,7 @@ namespace ColliderHelper
 					var mesh = baseCol as MeshCollider;
 					DrawTools.DrawLocalMesh(mesh.transform, mesh.sharedMesh, XKCDColors.ElectricBlue);
 				}
+				/* Doesn't work even a little bit, disabling for now
 				else if (baseCol is WheelCollider)
 				{
 					var wheel = baseCol as WheelCollider;
@@ -93,6 +94,7 @@ namespace ColliderHelper
 
 					DrawTools.DrawCircle(pos, wheel.transform.right, XKCDColors.Pink, wheel.radius);
 				}
+				*/
 			}
 
 			for (var i = 0; i < go.transform.childCount; i++)
