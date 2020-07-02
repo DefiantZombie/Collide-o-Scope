@@ -31,9 +31,7 @@ stages:
     steps:
     - checkout: self
       lfs: true
-    - task: NuGetCommand@2
-      displayName: 'NuGet restore'
-
+      
     - task: GitVersion@5
       inputs:
         runtime: 'full'
@@ -41,6 +39,9 @@ stages:
 
     - script: |
         echo ##vso[build.updatebuildnumber]$(GitVersion.SemVer)
+
+    - task: NuGetCommand@2
+      displayName: 'NuGet restore'
 
     - task: VSBuild@1
       displayName: 'Build solution **\*.sln'
