@@ -40,7 +40,7 @@ stages:
         updateAssemblyInfo: true
 
     - script: |
-        echo ##vso[build.updatebuildnumber]v$(GitVersion.SemVer)
+        echo ##vso[build.updatebuildnumber]$(GitVersion.SemVer)
 
     - task: VSBuild@1
       displayName: 'Build solution **\*.sln'
@@ -104,4 +104,3 @@ stages:
       kspVersion: $(KSPVersion)
       projectName: $(ProjectName)
       projectVersion: $(GitVersion.SemVer)
-      
