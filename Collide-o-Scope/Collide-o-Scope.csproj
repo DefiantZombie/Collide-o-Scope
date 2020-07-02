@@ -34,8 +34,8 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Assembly-CSharp, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Defiant_Zombie.KSP.Skeleton.Assembly-CSharp.1.8.0\lib\Assembly-CSharp.dll</HintPath>
+    <Reference Include="Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\packages\Defiant_Zombie.KSP.Skeleton.Assembly-CSharp.1.10.0\lib\Assembly-CSharp.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="System">
@@ -50,24 +50,24 @@
     <Reference Include="System.Xml">
       <Private>False</Private>
     </Reference>
-    <Reference Include="UnityEngine.AnimationModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Defiant_Zombie.KSP.Skeleton.UnityEngine.AnimationModule.1.8.0\lib\UnityEngine.AnimationModule.dll</HintPath>
+    <Reference Include="UnityEngine.AnimationModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\packages\Defiant_Zombie.KSP.Skeleton.UnityEngine.AnimationModule.1.10.0\lib\UnityEngine.AnimationModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Defiant_Zombie.KSP.Skeleton.UnityEngine.CoreModule.1.8.0\lib\UnityEngine.CoreModule.dll</HintPath>
+    <Reference Include="UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\packages\Defiant_Zombie.KSP.Skeleton.UnityEngine.CoreModule.1.10.0\lib\UnityEngine.CoreModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="UnityEngine.InputLegacyModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Defiant_Zombie.KSP.Skeleton.UnityEngine.InputLegacyModule.1.8.0\lib\UnityEngine.InputLegacyModule.dll</HintPath>
+    <Reference Include="UnityEngine.InputLegacyModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\packages\Defiant_Zombie.KSP.Skeleton.UnityEngine.InputLegacyModule.1.10.0\lib\UnityEngine.InputLegacyModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="UnityEngine.PhysicsModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Defiant_Zombie.KSP.Skeleton.UnityEngine.PhysicsModule.1.8.0\lib\UnityEngine.PhysicsModule.dll</HintPath>
+    <Reference Include="UnityEngine.PhysicsModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\packages\Defiant_Zombie.KSP.Skeleton.UnityEngine.PhysicsModule.1.10.0\lib\UnityEngine.PhysicsModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="UnityEngine.VehiclesModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Defiant_Zombie.KSP.Skeleton.UnityEngine.VehiclesModule.1.8.0\lib\UnityEngine.VehiclesModule.dll</HintPath>
+    <Reference Include="UnityEngine.VehiclesModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\packages\Defiant_Zombie.KSP.Skeleton.UnityEngine.VehiclesModule.1.10.0\lib\UnityEngine.VehiclesModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
   </ItemGroup>
