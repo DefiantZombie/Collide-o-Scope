@@ -31,7 +31,7 @@ jobs:
       repositoryName: $(Build.Repository.Name)
       action: 'create'
       target: '$(Build.SourceVersion)'
-      tagSource: 'auto'
+      tagSource: 'gitTag'
       title: 'ksp${{ parameters.kspVersion }}-${{ parameters.projectVersion }}'
       releaseNotesSource: 'file'
       releaseNotesFile: '$(System.ArtifactsDirectory)/build_archive/CHANGELOG.md'
