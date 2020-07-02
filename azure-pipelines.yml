@@ -34,11 +34,13 @@ stages:
     - task: NuGetCommand@2
       displayName: 'NuGet restore'
 
-    - task: gittools.gitversion.gitversion-task.GitVersion@4
-      displayName: GitVersion
+    - task: GitVersion@5
       inputs:
+        runtime: 'full'
         updateAssemblyInfo: true
-        preferBundledVersion: false
+
+    - script: |
+        echo ##vso[build.updatebuildnumber]v$(GitVersion.SemVer)
 
     - task: VSBuild@1
       displayName: 'Build solution **\*.sln'
@@ -80,7 +82,7 @@ stages:
       preRelease: false
       kspVersion: $(KSPVersion)
       projectName: $(ProjectName)
-
+      projectVersion: $(GitVersion.SemVer)
 
 - stage: pre_release
   displayName: Pre-Release
@@ -101,3 +103,5 @@ stages:
       preRelease: true
       kspVersion: $(KSPVersion)
       projectName: $(ProjectName)
+      projectVersion: $(GitVersion.SemVer)
+      

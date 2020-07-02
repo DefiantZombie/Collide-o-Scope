@@ -3,6 +3,7 @@ parameters:
   preRelease: false
   kspVersion: ''
   projectName: ''
+  projectVersion: ''
 
 jobs:
 - job: Release
@@ -21,9 +22,9 @@ jobs:
     inputs:
       rootFolderOrFile: '$(System.ArtifactsDirectory)/build_archive'
       includeRootFolder: false
-      archiveFile: '${{ parameters.projectName }}-ksp${{ parameters.kspVersion }}-$(Build.BuildNumber).zip'
+      archiveFile: '${{ parameters.projectName }}-ksp${{ parameters.kspVersion }}-${{ parameters.projectVersion }}.zip'
 
-  - task: GitHubRelease@0
+  - task: GitHubRelease@1
     displayName: 'GitHub release (create)'
     inputs:
       gitHubConnection: ${{ parameters.gitHubConnection }}
@@ -31,9 +32,9 @@ jobs:
       action: 'create'
       target: '$(Build.SourceVersion)'
       tagSource: 'auto'
-      title: 'ksp${{ parameters.kspVersion }}-$(Build.BuildNumber)'
+      title: 'ksp${{ parameters.kspVersion }}-${{ parameters.projectVersion }}'
       releaseNotesSource: 'file'
       releaseNotesFile: '$(System.ArtifactsDirectory)/build_archive/CHANGELOG.md'
-      assets: '${{ parameters.projectName }}-ksp${{ parameters.kspVersion }}-$(Build.BuildNumber).zip'
+      assets: '${{ parameters.projectName }}-ksp${{ parameters.kspVersion }}-${{ parameters.projectVersion }}.zip'
       isPreRelease: ${{ parameters.preRelease }}
       addChangeLog: false
