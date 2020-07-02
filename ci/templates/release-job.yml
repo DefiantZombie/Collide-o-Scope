@@ -17,9 +17,9 @@ jobs:
       artifactName: 'build_archive'
       downloadPath: '$(System.ArtifactsDirectory)'
 
-    - task: GitVersion@5
-      inputs:
-        runtime: 'full'
+  - task: GitVersion@5
+    inputs:
+      runtime: 'full'
 
   - task: ArchiveFiles@2
     displayName: 'Archive $(System.ArtifactsDirectory)/build_archive'
