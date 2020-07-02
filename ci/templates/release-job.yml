@@ -33,8 +33,7 @@ jobs:
       target: '$(Build.SourceVersion)'
       tagSource: 'gitTag'
       title: 'ksp${{ parameters.kspVersion }}-${{ parameters.projectVersion }}'
-      releaseNotesSource: 'file'
-      releaseNotesFile: '$(System.ArtifactsDirectory)/build_archive/CHANGELOG.md'
+      releaseNotesFilePath: '$(System.ArtifactsDirectory)/build_archive/CHANGELOG.md'
       assets: '${{ parameters.projectName }}-ksp${{ parameters.kspVersion }}-${{ parameters.projectVersion }}.zip'
       isPreRelease: ${{ parameters.preRelease }}
       addChangeLog: false
