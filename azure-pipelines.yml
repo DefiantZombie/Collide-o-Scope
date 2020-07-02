@@ -31,7 +31,7 @@ stages:
     steps:
     - checkout: self
       lfs: true
-      
+
     - task: GitVersion@5
       inputs:
         runtime: 'full'
@@ -83,7 +83,6 @@ stages:
       preRelease: false
       kspVersion: $(KSPVersion)
       projectName: $(ProjectName)
-      projectVersion: $(GitVersion.SemVer)
 
 - stage: pre_release
   displayName: Pre-Release
@@ -104,4 +103,3 @@ stages:
       preRelease: true
       kspVersion: $(KSPVersion)
       projectName: $(ProjectName)
-      projectVersion: $(GitVersion.SemVer)
